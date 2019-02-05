@@ -54,5 +54,56 @@ mkdir ~/Workspace; cd ~/Workspace
 git clone https://github.com/Samantha-Alison-Oldenburg/ruby-class.git
 ```
 
+## 3. Git Branching ##
+
+Git repositories are like trees, made of branches. They have a main branch, or trunk (often called the `master` branch). The master branch is the state of the code a user would download and use. They also have branches that diverge from that master branch. Most coding tasks in the real world involve creating a branch off of master, putting your changes into that branch, and then merging your branch back into master once you're done with your task.
+
+### Why branching? ###
+* Be able to push up changes even if your task isn't complete.
+  * No half done tasks in master
+* Make changes to the code that people can see without changing the master branch
+  * I'll be able to see your work while keeping the templates I make for you unchanged. You'll see some of these templates in the next homework.
+* A lot more reasons (trust me)
+
+### Making your own branch ###
+1. Go to your local copy of the repository.
+
+```
+cd ~/Workspace/ruby-class
+```
+
+2. Create a branch for your homework assignments.
+
+```
+git branch -c {your_name_goes_here}_homework_assignments
+```
+
+git checkout 'checks out' a branch. Think of it like checking out a book at a library. The `-c` means "I'm creating a new branch that doesn't exist on the remote". The remote is the central code location.
+
+3. Open this file in a text editor of your choice. Ubuntu machines should have gedit so I'll use that: `gedit ~/Workspace/ruby-class/Homework_0/README.md`
+
+4. Add stuff to the file. Remove stuff. Make changes! Don't forget to save.
+
+5. Make a commit. A commit is a group of changes you want to create together
+  a. Stage the changes you made for the commit
+```
+git add ~/Workspace/ruby-class/Homework_0/README.md
+```
+
+  b. Create the commit. The `-m` lets you specify your commit message: "My first commit"
+
+```
+git commit -m "My first commit"
+```
+
+6. Push your commit: `git push`
+
+7. Oops. That didn't work, because your branch doesn't exist in the remote yet. Let's add that branch in when we push.
+
+``` bash
+git push --set-upstream origin {the branch name you created above}
+```
+
+`origin` is the default name of the remote you got by cloning.
 
 **That's it, you're done with your first homework!**
