@@ -75,7 +75,7 @@ cd ~/Workspace/ruby-class
 2. Create a branch for your homework assignments.
 
 ```
-git branch -c {your_name_goes_here}_homework_assignments
+git branch -b {your_name_goes_here}_homework_assignments
 ```
 
 git checkout 'checks out' a branch. Think of it like checking out a book at a library. The `-c` means "I'm creating a new branch that doesn't exist on the remote". The remote is the central code location.
