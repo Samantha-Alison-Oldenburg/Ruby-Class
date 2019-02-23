@@ -27,3 +27,17 @@ array_of_strings = ['this', 'is', 'an', 'array', 'of', 'strings']
 |   3   |`'array'`|
 |   4   |`'of'`|
 |   5   |`'strings'`|
+
+
+Here's how you access the _nth_ member of the array: `array[n]`
+
+``` ruby
+array_of_strings[0]  # returns 'this'
+array_of_strings[1]  # returns 'is'
+```
+
+Keep in mind, that since the index starts at _0_, the index of the last member of an array is _one less_ than the length (the amount of items in the array) of the array.
+
+### Homework Part 1 ###
+
+Write a function that takes a single argument, an array, and prints out each member of the array on a single line. Use a `while` loop. Hint: you can get the length of an `array` using the object method `.count` (`array.count`).
